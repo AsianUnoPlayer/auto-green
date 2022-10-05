@@ -3,17 +3,17 @@ from guizero import *
 app = App(title="Automated Greenhouse Thingy")
 on_screen_title = Text(app, text="Automated Greenhouse GUI", size=18, align="top")
 
-water_window = Window(app, title="Water Controls")
+water_window = Window(app, title="Water Control Setting")
 water_title = Text(water_window, text="Welcome to Water Controls!", size=18, align="top")
 #water_window.tk.attributes("-fullscreen", True)
 water_window.hide()
 
-light_window = Window(app, title="Light Controls")
+light_window = Window(app, title="Light Control Setting")
 light_title = Text(light_window, text="Welcome to Light Controls!", size=18, align="top")
 #light_window.tk.attributes("-fullscreen", True)
 light_window.hide()
 
-data_window = Window(app, title="Data Controls")
+data_window = Window(app, title="Data Control Setting")
 data_title = Text(data_window, text="Welcome to Data Controls!", size=18, align="top")
 #data_window.tk.attributes("-fullscreen", True)
 data_window.hide()
@@ -55,9 +55,9 @@ data_message = Text(app)
 data_button = PushButton(button_box, text="Data Options", command=data_thing, width=12, height=3, align="left")
 data_button.text_size = 16
 
-main_button = PushButton(water_window, text="Back to Main", command=back_to_main, width=10, height=3, align="bottom")
-main_button = PushButton(light_window, text="Back to Main", command=back_to_main, width=10, height=3, align="bottom")
-main_button = PushButton(data_window, text="Back to Main", command=back_to_main, width=10, height=3, align="bottom")
+main_button = PushButton(water_window, text="Back to Main", command=back_to_main, width=20, height=3, align="bottom")
+main_button = PushButton(light_window, text="Back to Main", command=back_to_main, width=20, height=3, align="bottom")
+main_button = PushButton(data_window, text="Back to Main", command=back_to_main, width=20, height=3, align="bottom")
 
 #exit_message = Text(app)
 #exit_button = PushButton(app, text="Exit Program", command=exit_thing, width=12, height=1, align="top")
