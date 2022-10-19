@@ -2,12 +2,12 @@
 #define GREENCONTROL_H
 
 //all the components for light
-#define MOIST_SENSOR 
-#define TEMP_SENSOR //technically temperature & humidity sensor
-#define UV_LIGHT 
+#define MOIST_SENSOR 1
+#define TEMP_SENSOR 2 //technically temperature & humidity sensor
+#define UV_LIGHT 3
 
 //all the components for water
-#define WATER_PUMP
+#define WATER_PUMP 4
 #include <iostream>
 
 class plant
