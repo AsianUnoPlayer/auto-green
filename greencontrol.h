@@ -10,15 +10,18 @@
 #define WATER_PUMP 4
 #include <iostream>
 
+//all the extra stuff
+#define RGB_LIGHT 5
+
 class plant
 {
-    plant(String name, double water, double plantMin, double plantMax);
+    plant(String name, int water, double plantMin, double plantMax);
     
-    void get_moist();
-    void get_temp();
-    void set_temp();
+    int indicate_water_lvl();
+    void set_water(int waterLevel);
 
-    void indicate_water();
+    double get_temp();
+    void temp_adjust(double minTemp, double maxTemp);
 
     String name;
     double waterNeeds;
