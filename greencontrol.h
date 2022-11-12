@@ -8,10 +8,13 @@
 
 //all the components for water
 #define WATER_PUMP 4
+#define WATER_SENSOR 5
 #include <iostream>
 
 //all the extra stuff
 #define RGB_LIGHT 5
+#define MIN_WATER_TEMP = 32.0 //lowest temperature for the water pump
+#define MAX_WATER_TEMP = 70.0 //highest temperature for the water pump
 
 class plant
 {

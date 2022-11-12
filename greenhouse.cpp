@@ -2,6 +2,8 @@
 #include "greencontrol.h"
 using namespace std;
 
+//
+
 plant::plant(String name, int water, double plantMin, double plantMax)
 {
     name = name;
@@ -12,7 +14,7 @@ plant::plant(String name, int water, double plantMin, double plantMax)
 
 int plant::indicate_water_lvl()
 {
-    return MOIST_SENSOR;
+    return WATER_SENSOR;
 }
 
 void plant::set_water(int waterLevel)
@@ -35,6 +37,10 @@ void plant::set_water(int waterLevel)
             cout << "setting water level to HIGH" << endl;
             break;
     }
+
+    if (get_temp() < MIN_WATER_TEMP || get_temp() > MAX_WATER_TEMP ) {
+        temp_adjust(MIN_WATER_TEMP, MAX_WATER_TEMP);
+    }
 }
 
 double plant::get_temp()
@@ -48,7 +54,7 @@ void plant::temp_adjust(double minTemp, double maxTemp)
         UV_LIGHT = 1; //UV_LIGHT turns on
     }
 
-    if (TEMP_SENSOR > maxTemp) {
+    else if (TEMP_SENSOR > maxTemp) {
         UV_LIGHT = 0; //UV_LIGHT shuts off when it passes temeprature
     }
     else {
